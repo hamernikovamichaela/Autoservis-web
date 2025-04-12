@@ -61,3 +61,17 @@ const swiper = new Swiper('.swiper-container', {
     invert: false, // Směr posouvání kolečkem myši
   },
 });
+// ==============================
+// ===== Tlačítko "Scroll to Top" =====
+// ==============================
+
+/**
+ * Zobrazuje tlačítko "Scroll to Top" po odscrollování a nastavuje jeho funkčnost.
+ */
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+    scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
