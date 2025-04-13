@@ -1,0 +1,81 @@
+/* ===============================
+   Media Query pro tablety a mobily (max-width: 768px)
+   =============================== */
+@media only screen and (max-width: 768px) {
+  /* Přepněte orientaci hlavičky na sloupcový a zarovnejte na střed */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 10px;
+  }
+
+  /* Zobrazíme hamburger menu */
+  .menu-icon {
+    display: flex; /* Zobrazíme ikonu menu */
+    position: absolute; /* Fixujeme ikonu na pozici */
+    justify-content: center;
+    top: 85%; /* Umístíme pod logo */
+    right: 20px; /* Zarovnáme na pravou stranu */
+    transform: translateY(10px); /* Přidáme malou mezeru mezi logem a ikonou */
+  }
+
+  /* Styl pro samotnou ikonu */
+  .icon {
+    font-size: 40px; /* Větší ikona pro mobil */
+    color: white;
+    cursor: pointer;
+  }
+  /* Standardní navigace bude skryta */
+  .navigation {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-background-black);
+  }
+
+  /* Pokud je navigace aktivní, zobrazí se */
+  .navigation.active {
+    display: block;
+  }
+
+  /* Seznam navigačních odkazů se zobrazí ve sloupci */
+  .navigation__list {
+    background-color: var(--color-navi);
+    flex-direction: column;
+
+    align-items: center;
+    padding: 10px 0;
+  }
+  .navigation__link {
+    font-size: 1rem;
+    width: 100%; /* zabere celou šířku okna */
+    text-align: center; /* text zarovnaný na střed */
+    /*padding: 10px 0;*/
+    display: block; /* zajistí, že zabírá celou šířku */
+  }
+  .scroll-to-top {
+    display: none;
+  }
+  /* Změna obrázku na výšku */
+  .about__image img {
+    content: url("img/IMG_2473.jpeg");
+    height: auto; /* Zachováme správné proporce pro fotku na výšku */
+  }
+
+  /* Změna uspořádání pro malou obrazovku: text pod obrázkem */
+  .about__content {
+    flex-direction: column; /* Nastavíme vertikální layout */
+    align-items: center; /* Zarovnáme obsah na střed */
+  }
+
+  .about__image {
+    max-width: 100%; /* Zajistíme, že obrázek bude mít 100% šířku na malých obrazovkách */
+    margin-bottom: 20px; /* Přidáme mezery mezi obrázkem a textem */
+  }
+
+  .about__text {
+    max-width: 100%; /* Text bude mít šířku 100% */
+    text-align: center; /* Text na malých obrazovkách je lepší centrovat */
+  }
+}
